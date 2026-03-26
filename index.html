@@ -1,133 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GEE RELATED ENT | THE ARCHIVE</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEE RELATED</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Archivo+Black&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-
-<style>
-body { background-color: #ffffff; color: #000000; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; }
-.currency-font { font-family: 'UnifrakturMaguntia', serif; }
-.fat-words { font-family: 'Archivo Black', sans-serif; text-transform: uppercase; line-height: 0.8; letter-spacing: -0.05em; }
-.black-block { background-color: #000000; color: #ffffff; padding: 100px 20px; }
-
-/* THE FIX: Object-contain ensures the full art is readable */
-.hero-frame { border: 8px solid #000; background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.hero-img { width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
-
-.media-frame { border: 6px solid #000; background: #111; }
-.nav-white { background: rgba(255,255,255,0.95); border-bottom: 5px solid #000; }
-.img-heavy { filter: grayscale(100%) contrast(110%); transition: 0.4s; }
-.img-heavy:hover { filter: grayscale(0%); }
-video { width: 100%; height: auto; display: block; background: #000; }
-</style>
+    <style>
+        body { 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            background-color: #000; 
+            color: #fff; 
+            margin: 0; 
+            padding: 0; 
+            text-align: center; 
+        }
+        header { 
+            padding: 60px 20px; 
+            background: linear-gradient(to bottom, #111, #000); 
+            border-bottom: 1px solid #333; 
+        }
+        h1 { 
+            font-size: 3.5rem; 
+            letter-spacing: 8px; 
+            text-transform: uppercase; 
+            margin: 0; 
+            font-weight: 900;
+        }
+        h2 { 
+            font-size: 2rem; 
+            letter-spacing: 4px; 
+            border-bottom: 1px solid #444; 
+            display: inline-block; 
+            padding-bottom: 10px; 
+            margin-bottom: 30px;
+        }
+        section { 
+            padding: 80px 20px; 
+            max-width: 1000px; 
+            margin: auto; 
+        }
+        .krew-img { 
+            width: 100%; 
+            max-width: 800px;
+            border-radius: 4px; 
+            box-shadow: 0 0 20px rgba(255,255,255,0.05); 
+        }
+        .bio-img { 
+            width: 100%; 
+            max-width: 450px; 
+            border-radius: 8px; 
+            margin-bottom: 25px; 
+        }
+        .booking-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .booking-img { 
+            width: 45%; 
+            min-width: 300px;
+            border-radius: 4px; 
+        }
+        .video-wrapper { 
+            margin-bottom: 50px;
+            background: #111;
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .video-container { 
+            position: relative; 
+            padding-bottom: 56.25%; 
+            height: 0; 
+        }
+        .video-container iframe { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            border: none;
+            border-radius: 8px; 
+        }
+        .contact-info {
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            padding: 15px 30px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .contact-info:hover {
+            background: #fff;
+            color: #000;
+        }
+        footer { 
+            padding: 60px; 
+            color: #444; 
+            font-size: 0.9rem; 
+            letter-spacing: 2px;
+        }
+        hr { border: 0; border-top: 1px solid #222; margin: 20px 0; }
+    </style>
 </head>
 <body>
 
-<nav class="fixed top-0 w-full z-50 nav-white py-6 px-10 flex justify-between items-center">
-<div class="currency-font text-5xl">Gee Related</div>
-<div class="hidden md:flex space-x-12 fat-words text-sm tracking-widest uppercase">
-<a href="#visuals" class="hover:line-through">Visuals</a>
-<a href="#about" class="hover:line-through">The Krew</a>
-<a href="#booking" class="hover:line-through text-red-700">Booking</a>
-</div>
-</nav>
+    <header>
+        <h1>GEE RELATED</h1>
+    </header>
 
-<section class="min-h-screen flex items-center justify-center pt-32 pb-20 px-6">
-<div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-<div>
-<h1 class="fat-words text-[80px] md:text-[150px]">GEE<br>RELATED</h1>
-<div class="h-6 w-48 bg-black my-8"></div>
-<p class="text-3xl font-black uppercase tracking-tighter italic">Independent Label • Los Angeles</p>
-</div>
+    <section id="home">
+        <img src="images/krew.JPG" alt="The Krew" class="krew-img">
+        <p style="margin-top: 30px; letter-spacing: 3px; color: #888;">GEE RELATED ENTERTAINMENT</p>
+    </section>
 
-<div class="hero-frame shadow-[40px_40px_0px_#000]">
-<img src="images/greblack.jpg" class="hero-img img-heavy" alt="Gee Related Art">
-</div>
-</div>
-</section>
+    <hr>
 
-<section id="visuals" class="black-block">
-<div class="max-w-7xl mx-auto">
-<h2 class="fat-words text-7xl md:text-[120px] mb-16 text-center italic text-white">LATEST VISUALS</h2>
+    <section id="about">
+        <h2>ABOUT</h2>
+        <div>
+            <img src="images/mic.JPG" alt="Gee Related Bio" class="bio-img">
+            <p style="font-size: 1.2rem; line-height: 1.6; color: #ccc;">Independent Hip Hop / R&B Artist & Founder of Gee Related Entertainment.</p>
+        </div>
+    </section>
 
-<div class="max-w-5xl mx-auto mb-16">
-<div class="media-frame border-white">
-<video controls playsinline preload="auto">
-<source src="videos/moneysnippet.mp4" type="video/mp4">
-</video>
-<div class="p-6 bg-white text-black fat-words text-4xl text-center">MONEY SNIPPET</div>
-</div>
-</div>
+    <hr>
 
-<div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-<div class="media-frame border-white">
-<video controls playsinline preload="auto">
-<source src="videos/dayinthelife.mp4" type="video/mp4">
-</video>
-<div class="p-4 bg-white text-black fat-words text-xl text-center">DAY IN THE LIFE</div>
-</div>
-<div class="media-frame border-white">
-<video controls playsinline preload="auto">
-<source src="videos/lowkey.mp4" type="video/mp4">
-</video>
-<div class="p-4 bg-white text-black fat-words text-xl text-center">LOWKEY VISUAL</div>
-</div>
-</div>
-<p class="currency-font text-center text-4xl mt-16 opacity-40 italic">In God We Trust. All Others Pay Cash.</p>
-</div>
-</section>
+    <section id="media">
+        <h2>LATEST VISUALS</h2>
+        
+        <div class="video-wrapper">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/GWiwjOoAQgw?si=7_X8ki4x8jnn9GLO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
 
-<section id="about" class="py-24 px-6 bg-white border-b-8 border-black">
-<div class="max-w-6xl mx-auto">
-<div class="grid md:grid-cols-2 gap-20 items-center mb-32">
-<div class="media-frame">
-<img src="images/mic.jpg" class="w-full h-[600px] object-cover img-heavy">
-</div>
-<div>
-<h3 class="fat-words text-8xl mb-8 uppercase">The<br>Visionary</h3>
-<p class="text-4xl font-black border-l-8 border-black pl-8 leading-tight">Gee Related</p>
-</div>
-</div>
+        <div class="video-wrapper">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/KTgk7N7IQOE?si=5Ittnvw9TH8HvgOl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
 
-<div class="grid md:grid-cols-2 gap-20 items-center flex-row-reverse">
-<div class="order-2 md:order-1 text-right">
-<h3 class="fat-words text-8xl mb-8 uppercase text-black">The Krew</h3>
-<p class="text-4xl font-black border-r-8 border-black pr-8 tracking-tighter uppercase text-zinc-700">Prozik • Rocio</p>
-</div>
-<div class="media-frame order-1 md:order-2">
-<img src="images/krew.jpg" class="w-full h-[600px] object-cover img-heavy">
-</div>
-</div>
-</div>
-</section>
+        <div class="video-wrapper">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/sXQuu3UufCE?si=JFoaKkF40_Z_AzM1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
 
-<section id="booking" class="black-block">
-<div class="max-w-7xl mx-auto text-center">
-<h2 class="currency-font text-8xl mb-20 italic text-zinc-600 underline decoration-zinc-800 underline-offset-[25px]">Booking Inquiries</h2>
+    <hr>
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-20 text-black">
-<div class="media-frame h-[500px]">
-<img src="images/djquik.jpg" class="w-full h-full object-cover grayscale">
-</div>
-<div class="bg-white p-12 border-b-[20px] border-zinc-300">
-<h4 class="fat-words text-4xl mb-6">DIRECT CONTACT</h4>
-<a href="mailto:geerelatedent@gmail.com" class="fat-words text-xl md:text-2xl break-all hover:underline">GEERELATEDENT@GMAIL.COM</a>
-</div>
-<div class="media-frame h-[500px]">
-<img src="images/onstage.jpg" class="w-full h-full object-cover grayscale">
-</div>
-</div>
-</div>
-</section>
+    <section id="booking">
+        <h2>BOOKING</h2>
+        <div class="booking-container">
+            <img src="images/onstage.JPG" alt="On Stage" class="booking-img">
+            <img src="images/stage.jpg" alt="Live Performance" class="booking-img">
+        </div>
+        <p style="margin-top: 40px;">For features, shows, and business inquiries:</p>
+        <a href="mailto:Booking@geerelated.com" class="contact-info">Booking@geerelated.com</a>
+    </section>
 
-<footer class="py-16 text-center text-[10px] font-black tracking-[2.5em] uppercase opacity-30">
-GEE RELATED ENT © 2026
-</footer>
+    <footer>
+        <p>© 2026 GEE RELATED ENTERTAINMENT</p>
+    </footer>
 
 </body>
 </html>
