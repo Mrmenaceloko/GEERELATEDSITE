@@ -1,225 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GEE RELATED</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEE RELATED</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Archivo+Black&display=swap" rel="stylesheet">
 
-<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        body { 
+            font-family: 'Archivo Black', sans-serif; 
+            background-color: #ffffff; 
+            color: #000000; 
+            margin: 0; 
+            padding-top: 60px; 
+            text-align: center; 
+            overflow-x: hidden;
+        }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+        /* Fixed Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #ffffff;
+            border-bottom: 5px solid #000;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin: 0 15px;
+            font-size: 0.8rem;
+        }
 
-<style>
-/* High-Contrast Professional Branding */
-body {
-font-family: 'Helvetica Black', 'Arial Black', sans-serif;
-background-color: #ffffff;
-color: #000000;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-header {
-padding: 80px 20px;
-background: #ffffff;
-border-bottom: 8px solid #000000;
-}
-h1 {
-font-size: 5rem;
-letter-spacing: -3px;
-text-transform: uppercase;
-margin: 0;
-font-weight: 900;
-}
-h2 {
-font-size: 3rem;
-font-weight: 900;
-text-transform: uppercase;
-margin-bottom: 40px;
-letter-spacing: -1px;
-}
-section {
-padding: 100px 20px;
-max-width: 1100px;
-margin: auto;
-}
-.krew-img {
-width: 100%;
-max-width: 900px;
-border: 12px solid #000;
-}
-.bio-img {
-width: 100%;
-max-width: 500px;
-border: 6px solid #000;
-margin-bottom: 30px;
-}
-.booking-container {
-display: flex;
-justify-content: center;
-gap: 20px;
-flex-wrap: wrap;
-}
-.booking-img {
-width: 46%;
-min-width: 320px;
-border: 5px solid #000;
-}
-.video-wrapper {
-margin-bottom: 80px;
-padding: 15px;
-border: 4px solid #000;
-}
-.video-container {
-position: relative;
-padding-bottom: 56.25%;
-height: 0;
-}
-.video-container iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-border: none;
-}
-.contact-info {
-font-size: 2rem;
-color: #ffffff;
-background-color: #000000;
-text-decoration: none;
-padding: 25px 50px;
-display: inline-block;
-margin-top: 30px;
-font-weight: 900;
-text-transform: uppercase;
-}
-.contact-info:hover {
-background: #333333;
-}
+        /* --- LAYERED HERO SECTION --- */
+        .hero-container {
+            position: relative;
+            height: 80vh;
+            background-color: #000000; /* The black block base */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 10px solid #000;
+        }
+        .hero-text-bg {
+            position: absolute;
+            font-size: 18vw;
+            font-weight: 900;
+            color: #1a1a1a; /* Dark grey text on black background */
+            text-transform: uppercase;
+            white-space: nowrap;
+            z-index: 1;
+            letter-spacing: -5px;
+            user-select: none;
+        }
+        .hero-logo {
+            position: relative;
+            max-height: 60%;
+            max-width: 80%;
+            z-index: 2;
+            /* Optional: remove border if you want the logo to float */
+            border: 4px solid #fff; 
+        }
 
-/* --- MERCH SECTION & COMING SOON --- */
-#merch {
-padding: 100px 0; /* No side padding, full-width focus */
-background-color: #111111; /* Dark background for distinction */
-color: #ffffff;
-border-top: 12px solid #000000;
-border-bottom: 12px solid #000000;
-}
-.old-english {
-font-family: 'UnifrakturMaguntia', cursive; /* Applied font here */
-}
-.merch-header {
-font-size: 4rem;
-font-weight: normal; /* Font looks better not bolded */
-letter-spacing: normal;
-}
-.old-english-g {
-font-size: 6rem;
-color: #ff0000; /* Optional: Make the G red for branding pop */
-}
-.coming-soon-banner {
-max-width: 800px;
-margin: 50px auto;
-border: 5px solid #ff0000; /* Matching red border */
-padding: 20px;
-background: #000000;
-}
-.coming-soon-text {
-font-size: 5rem;
-letter-spacing: 5px;
-text-transform: uppercase;
-font-weight: normal;
-}
-.coming-soon-subtext {
-font-family: sans-serif; /* Clean font back for info */
-font-size: 1rem;
-font-weight: bold;
-letter-spacing: 2px;
-color: #aaaaaa;
-margin-top: 10px;
-}
-/* --- END MERCH SECTION --- */
+        /* --- UNIFORM IMAGE SIZING --- */
+        section { padding: 80px 20px; max-width: 1100px; margin: auto; }
+        
+        h2 { 
+            font-size: 3.5rem; 
+            text-transform: uppercase; 
+            margin-bottom: 40px;
+            letter-spacing: -2px;
+        }
 
-footer {
-padding: 100px;
-background: #000000;
-color: #ffffff;
-font-size: 1.2rem;
-font-weight: bold;
-text-transform: uppercase;
-letter-spacing: 2px;
-}
-hr { border: 0; border-top: 8px solid #000; margin: 0; }
-</style>
+        .standard-img {
+            width: 100%;
+            max-width: 650px; 
+            height: 450px;    
+            object-fit: cover; 
+            border: 8px solid #000;
+        }
+
+        .caption {
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-top: 15px;
+            text-transform: uppercase;
+            background: #000;
+            color: #fff;
+            display: inline-block;
+            padding: 8px 20px;
+        }
+
+        /* --- MERCH SECTION --- */
+        #merch { background: #000; color: #fff; padding: 120px 20px; }
+        .old-english-clean { 
+            font-family: 'Almendra Display', serif; 
+            font-size: 6rem; 
+            color: #ff0000; 
+            margin: 0;
+        }
+
+        .video-wrapper { 
+            margin-bottom: 50px;
+            border: 8px solid #000;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+        .booking-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .booking-img-small { width: 320px; height: 320px; object-fit: cover; border: 8px solid #000; }
+
+        .btn {
+            background: #000;
+            color: #fff;
+            padding: 20px 50px;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 900;
+            display: inline-block;
+            margin-top: 30px;
+            border: 4px solid #fff;
+        }
+
+        footer { background: #000; color: #fff; padding: 50px; font-weight: bold; }
+        hr { border: 0; border-top: 10px solid #000; margin: 0; }
+    </style>
 </head>
 <body>
 
-<header>
-<h1>GEE RELATED</h1>
-</header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#merch">Merch</a>
+        <a href="#visuals">Visuals</a>
+        <a href="#booking">Booking</a>
+    </nav>
 
-<section id="home">
-<img src="images/krew.JPG" alt="The Krew" class="krew-img">
-<p style="margin-top: 40px; font-weight: 900; font-size: 1.8rem;">GEE RELATED ENTERTAINMENT</p>
-</section>
+    <div class="hero-container">
+        <div class="hero-text-bg">GEE RELATED</div>
+        <img src="images/black_white.jpg" alt="Gee Related Logo" class="hero-logo">
+    </div>
 
-<hr>
+    <section id="home">
+        <h2>THE KREW</h2>
+        <img src="images/krew.JPG" alt="The Krew" class="standard-img">
+        <br>
+        <p class="caption">Prozik & Rocio Gee</p>
+    </section>
 
-<section id="about">
-<h2>ABOUT</h2>
-<img src="images/mic.JPG" alt="Bio Image" class="bio-img">
-<p style="font-size: 1.6rem; font-weight: 800; max-width: 800px; margin: auto; line-height: 1.2;">INDEPENDENT HIP HOP / R&B ARTIST & FOUNDER OF GEE RELATED ENTERTAINMENT.</p>
-</section>
+    <hr>
 
-<hr>
+    <section id="about">
+        <h2>ABOUT</h2>
+        <img src="images/mic.JPG" alt="Bio" class="standard-img">
+        <p style="font-size: 1.5rem; margin-top: 25px; line-height: 1.1;">INDEPENDENT HIP HOP / R&B ARTIST & FOUNDER OF GEE RELATED ENTERTAINMENT.</p>
+    </section>
 
-<section id="merch">
-<h2 class="old-english merch-header">
-<span class="old-english-g">G</span>ee Related Merch
-</h2>
+    <hr>
 
-<div class="coming-soon-banner">
-<p class="old-english coming-soon-text">Coming Soon</p>
-<p class="coming-soon-subtext">OFFICIAL MERCHANDISE 2026</p>
-</div>
-</section>
+    <section id="merch">
+        <h2 style="color: #fff; margin-bottom: 10px;">MERCH</h2>
+        <p class="old-english-clean">Coming Soon</p>
+    </section>
 
-<hr>
+    <hr>
 
-<section id="media">
-<h2>VISUALS</h2>
+    <section id="visuals">
+        <h2>VISUALS</h2>
+        <div class="video-wrapper">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/8_oZoxJNQig?si=L7wWjjIuUf5lVehK" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="video-wrapper">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/6IVTy4s9_7o?si=4Nlmb-cNjGPByPCL" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
 
-<div class="video-wrapper">
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/8_oZoxJNQig?si=L7wWjjIuUf5lVehK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-</div>
+    <hr>
 
-<div class="video-wrapper">
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/6IVTy4s9_7o?si=4Nlmb-cNjGPByPCL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-</div>
-</section>
+    <section id="booking">
+        <h2>BOOKING</h2>
+        <div class="booking-row">
+            <img src="images/onstage.JPG" alt="Booking 1" class="booking-img-small">
+            <img src="images/stage.jpg" alt="Booking 2" class="booking-img-small">
+        </div>
+        <br>
+        <a href="mailto:Booking@geerelated.com" class="btn">BOOKING@GEERELATED.COM</a>
+    </section>
 
-<hr>
-
-<section id="booking">
-<h2>BOOKING</h2>
-<div class="booking-container">
-<img src="images/onstage.JPG" alt="On Stage" class="booking-img">
-<img src="images/stage.jpg" alt="Performance" class="booking-img">
-</div>
-<p style="margin-top: 60px; font-weight: 900; font-size: 1.2rem;">FOR FEATURES / SHOWS / BUSINESS:</p>
-<a href="mailto:Booking@geerelated.com" class="contact-info">Booking@geerelated.com</a>
-</section>
-
-<footer>
-<p>© 2026 GEE RELATED ENTERTAINMENT</p>
-</footer>
+    <footer>
+        <p>© 2026 GEE RELATED ENTERTAINMENT</p>
+    </footer>
 
 </body>
 </html>
