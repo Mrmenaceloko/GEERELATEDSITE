@@ -1,172 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEE RELATED</title>
-    
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEE RELATED</title>
 
-    <style>
-        body { 
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-            background-color: #000; 
-            color: #fff; 
-            margin: 0; 
-            padding: 0; 
-            text-align: center; 
-        }
-        header { 
-            padding: 60px 20px; 
-            background: linear-gradient(to bottom, #111, #000); 
-            border-bottom: 1px solid #333; 
-        }
-        h1 { 
-            font-size: 3.5rem; 
-            letter-spacing: 8px; 
-            text-transform: uppercase; 
-            margin: 0; 
-            font-weight: 900;
-        }
-        h2 { 
-            font-size: 2rem; 
-            letter-spacing: 4px; 
-            border-bottom: 1px solid #444; 
-            display: inline-block; 
-            padding-bottom: 10px; 
-            margin-bottom: 30px;
-        }
-        section { 
-            padding: 80px 20px; 
-            max-width: 1000px; 
-            margin: auto; 
-        }
-        .krew-img { 
-            width: 100%; 
-            max-width: 800px;
-            border-radius: 4px; 
-            box-shadow: 0 0 20px rgba(255,255,255,0.05); 
-        }
-        .bio-img { 
-            width: 100%; 
-            max-width: 450px; 
-            border-radius: 8px; 
-            margin-bottom: 25px; 
-        }
-        .booking-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .booking-img { 
-            width: 45%; 
-            min-width: 300px;
-            border-radius: 4px; 
-        }
-        .video-wrapper { 
-            margin-bottom: 50px;
-            background: #111;
-            padding: 20px;
-            border-radius: 12px;
-        }
-        .video-container { 
-            position: relative; 
-            padding-bottom: 56.25%; 
-            height: 0; 
-        }
-        .video-container iframe { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            border: none;
-            border-radius: 8px; 
-        }
-        .contact-info {
-            font-size: 1.5rem;
-            color: #fff;
-            text-decoration: none;
-            border: 2px solid #fff;
-            padding: 15px 30px;
-            display: inline-block;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-        .contact-info:hover {
-            background: #fff;
-            color: #000;
-        }
-        footer { 
-            padding: 60px; 
-            color: #444; 
-            font-size: 0.9rem; 
-            letter-spacing: 2px;
-        }
-        hr { border: 0; border-top: 1px solid #222; margin: 20px 0; }
-    </style>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+<style>
+/* High-Contrast Professional Branding */
+body {
+font-family: 'Helvetica Black', 'Arial Black', sans-serif;
+background-color: #ffffff;
+color: #000000;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+header {
+padding: 80px 20px;
+background: #ffffff;
+border-bottom: 8px solid #000000;
+}
+h1 {
+font-size: 5rem;
+letter-spacing: -3px;
+text-transform: uppercase;
+margin: 0;
+font-weight: 900;
+}
+h2 {
+font-size: 3rem;
+font-weight: 900;
+text-transform: uppercase;
+margin-bottom: 40px;
+letter-spacing: -1px;
+}
+section {
+padding: 100px 20px;
+max-width: 1100px;
+margin: auto;
+}
+.krew-img {
+width: 100%;
+max-width: 900px;
+border: 12px solid #000;
+}
+.bio-img {
+width: 100%;
+max-width: 500px;
+border: 6px solid #000;
+margin-bottom: 30px;
+}
+.booking-container {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+.booking-img {
+width: 46%;
+min-width: 320px;
+border: 5px solid #000;
+}
+.video-wrapper {
+margin-bottom: 80px;
+padding: 15px;
+border: 4px solid #000;
+}
+.video-container {
+position: relative;
+padding-bottom: 56.25%;
+height: 0;
+}
+.video-container iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: none;
+}
+.contact-info {
+font-size: 2rem;
+color: #ffffff;
+background-color: #000000;
+text-decoration: none;
+padding: 25px 50px;
+display: inline-block;
+margin-top: 30px;
+font-weight: 900;
+text-transform: uppercase;
+}
+.contact-info:hover {
+background: #333333;
+}
+
+/* --- MERCH SECTION & COMING SOON --- */
+#merch {
+padding: 100px 0; /* No side padding, full-width focus */
+background-color: #111111; /* Dark background for distinction */
+color: #ffffff;
+border-top: 12px solid #000000;
+border-bottom: 12px solid #000000;
+}
+.old-english {
+font-family: 'UnifrakturMaguntia', cursive; /* Applied font here */
+}
+.merch-header {
+font-size: 4rem;
+font-weight: normal; /* Font looks better not bolded */
+letter-spacing: normal;
+}
+.old-english-g {
+font-size: 6rem;
+color: #ff0000; /* Optional: Make the G red for branding pop */
+}
+.coming-soon-banner {
+max-width: 800px;
+margin: 50px auto;
+border: 5px solid #ff0000; /* Matching red border */
+padding: 20px;
+background: #000000;
+}
+.coming-soon-text {
+font-size: 5rem;
+letter-spacing: 5px;
+text-transform: uppercase;
+font-weight: normal;
+}
+.coming-soon-subtext {
+font-family: sans-serif; /* Clean font back for info */
+font-size: 1rem;
+font-weight: bold;
+letter-spacing: 2px;
+color: #aaaaaa;
+margin-top: 10px;
+}
+/* --- END MERCH SECTION --- */
+
+footer {
+padding: 100px;
+background: #000000;
+color: #ffffff;
+font-size: 1.2rem;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+hr { border: 0; border-top: 8px solid #000; margin: 0; }
+</style>
 </head>
 <body>
 
-    <header>
-        <h1>GEE RELATED</h1>
-    </header>
+<header>
+<h1>GEE RELATED</h1>
+</header>
 
-    <section id="home">
-        <img src="images/krew.JPG" alt="The Krew" class="krew-img">
-        <p style="margin-top: 30px; letter-spacing: 3px; color: #888;">GEE RELATED ENTERTAINMENT</p>
-    </section>
+<section id="home">
+<img src="images/krew.JPG" alt="The Krew" class="krew-img">
+<p style="margin-top: 40px; font-weight: 900; font-size: 1.8rem;">GEE RELATED ENTERTAINMENT</p>
+</section>
 
-    <hr>
+<hr>
 
-    <section id="about">
-        <h2>ABOUT</h2>
-        <div>
-            <img src="images/mic.JPG" alt="Gee Related Bio" class="bio-img">
-            <p style="font-size: 1.2rem; line-height: 1.6; color: #ccc;">Independent Hip Hop / R&B Artist & Founder of Gee Related Entertainment.</p>
-        </div>
-    </section>
+<section id="about">
+<h2>ABOUT</h2>
+<img src="images/mic.JPG" alt="Bio Image" class="bio-img">
+<p style="font-size: 1.6rem; font-weight: 800; max-width: 800px; margin: auto; line-height: 1.2;">INDEPENDENT HIP HOP / R&B ARTIST & FOUNDER OF GEE RELATED ENTERTAINMENT.</p>
+</section>
 
-    <hr>
+<hr>
 
-    <section id="media">
-        <h2>LATEST VISUALS</h2>
-        
-        <div class="video-wrapper">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/GWiwjOoAQgw?si=7_X8ki4x8jnn9GLO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
+<section id="merch">
+<h2 class="old-english merch-header">
+<span class="old-english-g">G</span>ee Related Merch
+</h2>
 
-        <div class="video-wrapper">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/KTgk7N7IQOE?si=5Ittnvw9TH8HvgOl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
+<div class="coming-soon-banner">
+<p class="old-english coming-soon-text">Coming Soon</p>
+<p class="coming-soon-subtext">OFFICIAL MERCHANDISE 2026</p>
+</div>
+</section>
 
-        <div class="video-wrapper">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/sXQuu3UufCE?si=JFoaKkF40_Z_AzM1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+<hr>
 
-    <hr>
+<section id="media">
+<h2>VISUALS</h2>
 
-    <section id="booking">
-        <h2>BOOKING</h2>
-        <div class="booking-container">
-            <img src="images/onstage.JPG" alt="On Stage" class="booking-img">
-            <img src="images/stage.jpg" alt="Live Performance" class="booking-img">
-        </div>
-        <p style="margin-top: 40px;">For features, shows, and business inquiries:</p>
-        <a href="mailto:Booking@geerelated.com" class="contact-info">Booking@geerelated.com</a>
-    </section>
+<div class="video-wrapper">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/8_oZoxJNQig?si=L7wWjjIuUf5lVehK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
 
-    <footer>
-        <p>© 2026 GEE RELATED ENTERTAINMENT</p>
-    </footer>
+<div class="video-wrapper">
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/6IVTy4s9_7o?si=4Nlmb-cNjGPByPCL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+</section>
+
+<hr>
+
+<section id="booking">
+<h2>BOOKING</h2>
+<div class="booking-container">
+<img src="images/onstage.JPG" alt="On Stage" class="booking-img">
+<img src="images/stage.jpg" alt="Performance" class="booking-img">
+</div>
+<p style="margin-top: 60px; font-weight: 900; font-size: 1.2rem;">FOR FEATURES / SHOWS / BUSINESS:</p>
+<a href="mailto:Booking@geerelated.com" class="contact-info">Booking@geerelated.com</a>
+</section>
+
+<footer>
+<p>© 2026 GEE RELATED ENTERTAINMENT</p>
+</footer>
 
 </body>
 </html>
