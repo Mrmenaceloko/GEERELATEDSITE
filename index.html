@@ -14,7 +14,7 @@
 
     name="description"
 
-    content="Official website of Gee Related, independent Hip Hop and R&B artist and founder of Gee Related Entertainment. Stream music, watch visuals, and book performances."
+    content="Official website of Gee Related, independent Hip Hop and R&B artist and founder of Gee Related Entertainment."
 
   />
 
@@ -33,6 +33,18 @@
   />
 
   <style>
+
+    :root {
+
+      --dodger-blue: #6CB4EE;
+
+      --black: #000000;
+
+      --white: #ffffff;
+
+      --dark-gray: #111111;
+
+    }
 
     * {
 
@@ -54,9 +66,9 @@
 
       font-family: 'Archivo Black', sans-serif;
 
-      background: #ffffff;
+      background: var(--white);
 
-      color: #000000;
+      color: var(--black);
 
       text-align: center;
 
@@ -74,13 +86,13 @@
 
       width: 100%;
 
-      background: #ffffff;
+      background: var(--white);
 
-      border-bottom: 5px solid #000;
+      border-bottom: 5px solid var(--black);
 
       z-index: 1000;
 
-      padding: 14px 10px;
+      padding: 15px 10px;
 
     }
 
@@ -88,7 +100,7 @@
 
       text-decoration: none;
 
-      color: #000;
+      color: var(--black);
 
       margin: 0 12px;
 
@@ -104,7 +116,7 @@
 
     nav a:hover {
 
-      color: #ff0000;
+      color: var(--dodger-blue);
 
     }
 
@@ -116,7 +128,7 @@
 
       min-height: 92vh;
 
-      background: #000;
+      background: var(--black);
 
       display: flex;
 
@@ -128,7 +140,7 @@
 
       padding: 40px 20px;
 
-      border-bottom: 10px solid #000;
+      border-bottom: 10px solid var(--black);
 
     }
 
@@ -140,7 +152,7 @@
 
       font-weight: 900;
 
-      color: #161616;
+      color: #151515;
 
       text-transform: uppercase;
 
@@ -170,7 +182,7 @@
 
       max-width: 430px;
 
-      border: 5px solid #ffffff;
+      border: 5px solid var(--white);
 
       margin-bottom: 25px;
 
@@ -178,7 +190,7 @@
 
     .tagline {
 
-      color: #ffffff;
+      color: var(--white);
 
       font-size: 1.4rem;
 
@@ -190,7 +202,7 @@
 
     .subtagline {
 
-      color: #ff0000;
+      color: var(--dodger-blue);
 
       text-transform: uppercase;
 
@@ -220,11 +232,11 @@
 
       padding: 18px 34px;
 
-      background: #000;
+      background: var(--black);
 
-      color: #fff;
+      color: var(--white);
 
-      border: 4px solid #000;
+      border: 4px solid var(--black);
 
       text-decoration: none;
 
@@ -240,25 +252,27 @@
 
     .btn:hover {
 
-      transform: scale(1.04);
+      transform: scale(1.05);
 
     }
 
-    .btn.red {
+    .btn.blue {
 
-      background: #ff0000;
+      background: var(--dodger-blue);
 
-      border-color: #ff0000;
+      border-color: var(--dodger-blue);
+
+      color: var(--black);
 
     }
 
     .btn.white {
 
-      background: #fff;
+      background: var(--white);
 
-      border-color: #fff;
+      border-color: var(--white);
 
-      color: #000;
+      color: var(--black);
 
     }
 
@@ -276,7 +290,7 @@
 
     h2 {
 
-      font-size: 3.4rem;
+      font-size: 3.5rem;
 
       text-transform: uppercase;
 
@@ -298,9 +312,9 @@
 
     }
 
-    /* IMAGES */
+    /* IMAGE FRAMES */
 
-    .standard-img {
+    .image-frame {
 
       width: 100%;
 
@@ -308,9 +322,29 @@
 
       height: 450px;
 
-      object-fit: cover;
+      margin: auto;
 
-      border: 8px solid #000;
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background: var(--black);
+
+      border: 8px solid var(--black);
+
+      overflow: hidden;
+
+    }
+
+    .image-frame img {
+
+      max-width: 100%;
+
+      max-height: 100%;
+
+      object-fit: contain;
 
     }
 
@@ -320,9 +354,9 @@
 
       margin-top: 15px;
 
-      background: #000;
+      background: var(--black);
 
-      color: #fff;
+      color: var(--white);
 
       padding: 8px 20px;
 
@@ -350,9 +384,9 @@
 
     .dark-section {
 
-      background: #000;
+      background: var(--black);
 
-      color: #fff;
+      color: var(--white);
 
       max-width: none;
 
@@ -370,7 +404,7 @@
 
       font-family: 'Almendra Display', serif;
 
-      color: #ff0000;
+      color: var(--dodger-blue);
 
       font-size: 5rem;
 
@@ -382,7 +416,7 @@
 
     .video-wrapper {
 
-      border: 8px solid #000;
+      border: 8px solid var(--black);
 
       margin-bottom: 50px;
 
@@ -434,23 +468,41 @@
 
     }
 
-    .booking-img-small {
+    .booking-frame {
 
       width: 320px;
 
       height: 320px;
 
-      object-fit: cover;
+      display: flex;
 
-      border: 8px solid #000;
+      align-items: center;
+
+      justify-content: center;
+
+      background: var(--black);
+
+      border: 8px solid var(--black);
+
+      overflow: hidden;
+
+    }
+
+    .booking-frame img {
+
+      max-width: 100%;
+
+      max-height: 100%;
+
+      object-fit: contain;
 
     }
 
     .email-box {
 
-      background: #000;
+      background: var(--black);
 
-      color: #fff;
+      color: var(--white);
 
       padding: 35px 20px;
 
@@ -462,9 +514,9 @@
 
     footer {
 
-      background: #000;
+      background: var(--black);
 
-      color: #fff;
+      color: var(--white);
 
       padding: 50px 20px;
 
@@ -476,7 +528,7 @@
 
       border: 0;
 
-      border-top: 10px solid #000;
+      border-top: 10px solid var(--black);
 
       margin: 0;
 
@@ -530,9 +582,9 @@
 
       }
 
-      .standard-img {
+      .image-frame {
 
-        height: 300px;
+        height: 320px;
 
       }
 
@@ -552,7 +604,7 @@
 
 <body>
 
-  <!-- NAV -->
+  <!-- NAVIGATION -->
 
   <nav>
 
@@ -610,7 +662,7 @@
 
         </a>
 
-        <a href="#visuals" class="btn red">
+        <a href="#visuals" class="btn blue">
 
           Watch Visuals
 
@@ -650,7 +702,7 @@
 
         target="_blank"
 
-        class="btn red"
+        class="btn blue"
 
       >
 
@@ -702,8 +754,6 @@
 
     </div>
 
-    <!-- SPOTIFY EMBED -->
-
     <div class="spotify-embed">
 
       <iframe
@@ -732,23 +782,23 @@
 
   <hr>
 
-  <!-- KREW -->
+  <!-- THE KREW -->
 
   <section>
 
     <h2>The Krew</h2>
 
-    <img
+    <div class="image-frame">
 
-      src="images/krew.JPG"
+      <img
 
-      alt="The Krew"
+        src="images/krew.JPG"
 
-      class="standard-img"
+        alt="The Krew"
 
-    >
+      >
 
-    <br>
+    </div>
 
     <p class="caption">
 
@@ -766,15 +816,17 @@
 
     <h2>About</h2>
 
-    <img
+    <div class="image-frame">
 
-      src="images/mic.JPG"
+      <img
 
-      alt="Gee Related"
+        src="images/mic.JPG"
 
-      class="standard-img"
+        alt="Gee Related"
 
-    >
+      >
+
+    </div>
 
     <p class="bio-text">
 
@@ -818,7 +870,9 @@
 
         Exclusive visuals, music drops,
 
-        behind-the-scenes content, and future merch releases.
+        behind-the-scenes content,
+
+        and future merch releases.
 
       </p>
 
@@ -894,25 +948,29 @@
 
     <div class="booking-row">
 
-      <img
+      <div class="booking-frame">
 
-        src="images/onstage.JPG"
+        <img
 
-        alt="Performance Photo"
+          src="images/onstage.JPG"
 
-        class="booking-img-small"
+          alt="Performance Photo"
 
-      >
+        >
 
-      <img
+      </div>
 
-        src="images/stage.jpg"
+      <div class="booking-frame">
 
-        alt="Stage Photo"
+        <img
 
-        class="booking-img-small"
+          src="images/stage.jpg"
 
-      >
+          alt="Stage Photo"
+
+        >
+
+      </div>
 
     </div>
 
@@ -920,9 +978,11 @@
 
       <p>
 
-        For booking, collaborations, interviews,
+        For booking, collaborations,
 
-        features, and business inquiries:
+        interviews, features,
+
+        and business inquiries:
 
       </p>
 
@@ -954,7 +1014,9 @@
 
     <p>
 
-      It’s more than a lifestyle. It’s a movement.
+      It’s more than a lifestyle.
+
+      It’s a movement.
 
     </p>
 
