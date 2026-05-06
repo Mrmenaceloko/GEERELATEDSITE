@@ -6,7 +6,7 @@
 
   <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Gee Related | Official Website</title>
 
@@ -26,7 +26,7 @@
 
   <link
 
-    href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Archivo+Black&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Archivo+Black&family=Cinzel:wght@700;900&display=swap"
 
     rel="stylesheet"
 
@@ -36,7 +36,7 @@
 
     :root {
 
-      --dodger-blue: #6CB4EE;
+      --royal-blue: #005A9C;
 
       --black: #000000;
 
@@ -76,8 +76,6 @@
 
     }
 
-    /* NAVIGATION */
-
     nav {
 
       position: fixed;
@@ -116,11 +114,9 @@
 
     nav a:hover {
 
-      color: var(--dodger-blue);
+      color: var(--royal-blue);
 
     }
-
-    /* HERO */
 
     .hero-container {
 
@@ -202,7 +198,7 @@
 
     .subtagline {
 
-      color: var(--dodger-blue);
+      color: var(--royal-blue);
 
       text-transform: uppercase;
 
@@ -211,8 +207,6 @@
       margin-bottom: 30px;
 
     }
-
-    /* BUTTONS */
 
     .btn-group {
 
@@ -258,11 +252,11 @@
 
     .btn.blue {
 
-      background: var(--dodger-blue);
+      background: var(--royal-blue);
 
-      border-color: var(--dodger-blue);
+      border-color: var(--royal-blue);
 
-      color: var(--black);
+      color: var(--white);
 
     }
 
@@ -275,8 +269,6 @@
       color: var(--black);
 
     }
-
-    /* SECTIONS */
 
     section {
 
@@ -311,8 +303,6 @@
       line-height: 1.5;
 
     }
-
-    /* IMAGE FRAMES */
 
     .image-frame {
 
@@ -366,8 +356,6 @@
 
     }
 
-    /* SPOTIFY */
-
     .spotify-embed {
 
       max-width: 900px;
@@ -379,8 +367,6 @@
       overflow: hidden;
 
     }
-
-    /* DARK SECTION */
 
     .dark-section {
 
@@ -402,17 +388,29 @@
 
     .movement-title {
 
-      font-family: 'Almendra Display', serif;
+      font-family: 'Cinzel', serif;
 
-      color: var(--dodger-blue);
+      color: var(--royal-blue);
 
-      font-size: 5rem;
+      font-size: 5.5rem;
 
       margin: 0;
 
-    }
+      text-transform: uppercase;
 
-    /* VIDEOS */
+      letter-spacing: 3px;
+
+      font-weight: 900;
+
+      line-height: 0.95;
+
+      text-shadow:
+
+        3px 3px 0px #000,
+
+        6px 6px 0px rgba(0, 0, 0, 0.35);
+
+    }
 
     .video-wrapper {
 
@@ -453,8 +451,6 @@
       border: none;
 
     }
-
-    /* BOOKING */
 
     .booking-row {
 
@@ -510,8 +506,6 @@
 
     }
 
-    /* FOOTER */
-
     footer {
 
       background: var(--black);
@@ -533,8 +527,6 @@
       margin: 0;
 
     }
-
-    /* MOBILE */
 
     @media (max-width: 700px) {
 
@@ -578,7 +570,9 @@
 
       .movement-title {
 
-        font-size: 3.5rem;
+        font-size: 3rem;
+
+        line-height: 1;
 
       }
 
@@ -604,8 +598,6 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-
   <nav>
 
     <a href="#home">Home</a>
@@ -619,8 +611,6 @@
     <a href="#booking">Booking</a>
 
   </nav>
-
-  <!-- HERO -->
 
   <header class="hero-container" id="home">
 
@@ -680,17 +670,13 @@
 
   </header>
 
-  <!-- MUSIC -->
-
   <section id="music">
 
     <h2>Latest Music</h2>
 
     <p class="bio-text">
 
-      Stream Gee Related on Spotify, Apple Music,
-
-      YouTube, and SoundCloud.
+      Stream Gee Related on Spotify, Apple Music, YouTube, and SoundCloud.
 
     </p>
 
@@ -698,7 +684,7 @@
 
       <a
 
-        href="https://open.spotify.com/artist/7jpB3rgPTkPa9nNCZciYJd?si=eifNNcTYQqSad9jT-cjmbQ"
+        href="https://open.spotify.com/playlist/5XKzpGmapIR41sSIRxWTwr?si=82JPuuuIQU6-Qr5tDC4PQA&pi=2baLlpD6TOOXZ"
 
         target="_blank"
 
@@ -782,8 +768,6 @@
 
   <hr>
 
-  <!-- THE KREW -->
-
   <section>
 
     <h2>The Krew</h2>
@@ -810,8 +794,6 @@
 
   <hr>
 
-  <!-- ABOUT -->
-
   <section id="about">
 
     <h2>About</h2>
@@ -830,21 +812,13 @@
 
     <p class="bio-text">
 
-      Gee Related is an independent Hip Hop and R&B artist
+      Gee Related is an independent Hip Hop and R&B artist and founder of Gee Related Entertainment.
 
-      and founder of Gee Related Entertainment. Built on
+      Built on loyalty, hustle, and real-life experiences, Gee Related represents more than music — it’s a movement.
 
-      loyalty, hustle, and real-life experiences, Gee Related
+      Combining melodic energy, cinematic visuals, and authentic storytelling, Gee Related is building a culture
 
-      represents more than music — it’s a movement.
-
-      Combining melodic energy, cinematic visuals,
-
-      and authentic storytelling, Gee Related is building
-
-      a culture for listeners who respect ambition,
-
-      family, and authenticity.
+      for listeners who respect ambition, family, and authenticity.
 
     </p>
 
@@ -852,27 +826,21 @@
 
   <hr>
 
-  <!-- MOVEMENT -->
-
   <section class="dark-section">
 
     <div class="dark-inner">
 
-      <h2>Join The Movement</h2>
+      <h2>Merch</h2>
 
       <p class="movement-title">
 
-        Gee Related
+        Coming Soon
 
       </p>
 
       <p class="bio-text">
 
-        Exclusive visuals, music drops,
-
-        behind-the-scenes content,
-
-        and future merch releases.
+        Exclusive visuals, music drops, behind-the-scenes content, and future merch releases.
 
       </p>
 
@@ -897,8 +865,6 @@
   </section>
 
   <hr>
-
-  <!-- VISUALS -->
 
   <section id="visuals">
 
@@ -940,8 +906,6 @@
 
   <hr>
 
-  <!-- BOOKING -->
-
   <section id="booking">
 
     <h2>Booking</h2>
@@ -978,11 +942,7 @@
 
       <p>
 
-        For booking, collaborations,
-
-        interviews, features,
-
-        and business inquiries:
+        For booking, collaborations, interviews, features, and business inquiries:
 
       </p>
 
@@ -1002,8 +962,6 @@
 
   </section>
 
-  <!-- FOOTER -->
-
   <footer>
 
     <p>
@@ -1014,9 +972,7 @@
 
     <p>
 
-      It’s more than a lifestyle.
-
-      It’s a movement.
+      It’s more than a lifestyle. It’s a movement.
 
     </p>
 
