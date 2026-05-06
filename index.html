@@ -1,212 +1,965 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEE RELATED</title>
-    
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Archivo+Black&display=swap" rel="stylesheet">
 
-    <style>
-        body { 
-            font-family: 'Archivo Black', sans-serif; 
-            background-color: #ffffff; 
-            color: #000000; 
-            margin: 0; 
-            padding-top: 60px; 
-            text-align: center; 
-            overflow-x: hidden;
-        }
+  <meta charset="UTF-8" />
 
-        /* Fixed Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #ffffff;
-            border-bottom: 5px solid #000;
-            z-index: 1000;
-            padding: 10px 0;
-        }
-        nav a {
-            text-decoration: none;
-            color: #000;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin: 0 15px;
-            font-size: 0.8rem;
-        }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        /* --- LAYERED HERO SECTION --- */
-        .hero-container {
-            position: relative;
-            height: 80vh;
-            background-color: #000000; /* The black block base */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border-bottom: 10px solid #000;
-        }
-        .hero-text-bg {
-            position: absolute;
-            font-size: 18vw;
-            font-weight: 900;
-            color: #1a1a1a; /* Dark grey text on black background */
-            text-transform: uppercase;
-            white-space: nowrap;
-            z-index: 1;
-            letter-spacing: -5px;
-            user-select: none;
-        }
-        .hero-logo {
-            position: relative;
-            max-height: 60%;
-            max-width: 80%;
-            z-index: 2;
-            /* Optional: remove border if you want the logo to float */
-            border: 4px solid #fff; 
-        }
+  <title>Gee Related | Official Website</title>
 
-        /* --- UNIFORM IMAGE SIZING --- */
-        section { padding: 80px 20px; max-width: 1100px; margin: auto; }
-        
-        h2 { 
-            font-size: 3.5rem; 
-            text-transform: uppercase; 
-            margin-bottom: 40px;
-            letter-spacing: -2px;
-        }
+  <meta
 
-        .standard-img {
-            width: 100%;
-            max-width: 650px; 
-            height: 450px;    
-            object-fit: cover; 
-            border: 8px solid #000;
-        }
+    name="description"
 
-        .caption {
-            font-size: 1.2rem;
-            font-weight: 900;
-            margin-top: 15px;
-            text-transform: uppercase;
-            background: #000;
-            color: #fff;
-            display: inline-block;
-            padding: 8px 20px;
-        }
+    content="Official website of Gee Related, independent Hip Hop and R&B artist and founder of Gee Related Entertainment. Stream music, watch visuals, and book performances."
 
-        /* --- MERCH SECTION --- */
-        #merch { background: #000; color: #fff; padding: 120px 20px; }
-        .old-english-clean { 
-            font-family: 'Almendra Display', serif; 
-            font-size: 6rem; 
-            color: #ff0000; 
-            margin: 0;
-        }
+  />
 
-        .video-wrapper { 
-            margin-bottom: 50px;
-            border: 8px solid #000;
-            max-width: 850px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
-        .booking-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .booking-img-small { width: 320px; height: 320px; object-fit: cover; border: 8px solid #000; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-        .btn {
-            background: #000;
-            color: #fff;
-            padding: 20px 50px;
-            text-decoration: none;
-            font-size: 1.8rem;
-            font-weight: 900;
-            display: inline-block;
-            margin-top: 30px;
-            border: 4px solid #fff;
-        }
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        footer { background: #000; color: #fff; padding: 50px; font-weight: bold; }
-        hr { border: 0; border-top: 10px solid #000; margin: 0; }
-    </style>
+  <link
+
+    href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Archivo+Black&display=swap"
+
+    rel="stylesheet"
+
+  />
+
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+    }
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+    body {
+
+      margin: 0;
+
+      padding-top: 70px;
+
+      font-family: 'Archivo Black', sans-serif;
+
+      background: #ffffff;
+
+      color: #000000;
+
+      text-align: center;
+
+      overflow-x: hidden;
+
+    }
+
+    /* NAVIGATION */
+
+    nav {
+
+      position: fixed;
+
+      top: 0;
+
+      width: 100%;
+
+      background: #ffffff;
+
+      border-bottom: 5px solid #000;
+
+      z-index: 1000;
+
+      padding: 14px 10px;
+
+    }
+
+    nav a {
+
+      text-decoration: none;
+
+      color: #000;
+
+      margin: 0 12px;
+
+      text-transform: uppercase;
+
+      font-size: 0.78rem;
+
+      font-weight: 900;
+
+      transition: 0.2s ease;
+
+    }
+
+    nav a:hover {
+
+      color: #ff0000;
+
+    }
+
+    /* HERO */
+
+    .hero-container {
+
+      position: relative;
+
+      min-height: 92vh;
+
+      background: #000;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+      padding: 40px 20px;
+
+      border-bottom: 10px solid #000;
+
+    }
+
+    .hero-text-bg {
+
+      position: absolute;
+
+      font-size: 15vw;
+
+      font-weight: 900;
+
+      color: #161616;
+
+      text-transform: uppercase;
+
+      white-space: nowrap;
+
+      letter-spacing: -6px;
+
+      z-index: 1;
+
+      user-select: none;
+
+    }
+
+    .hero-content {
+
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 900px;
+
+    }
+
+    .hero-logo {
+
+      width: 90%;
+
+      max-width: 430px;
+
+      border: 5px solid #ffffff;
+
+      margin-bottom: 25px;
+
+    }
+
+    .tagline {
+
+      color: #ffffff;
+
+      font-size: 1.4rem;
+
+      text-transform: uppercase;
+
+      margin-bottom: 10px;
+
+    }
+
+    .subtagline {
+
+      color: #ff0000;
+
+      text-transform: uppercase;
+
+      font-size: 1rem;
+
+      margin-bottom: 30px;
+
+    }
+
+    /* BUTTONS */
+
+    .btn-group {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 15px;
+
+      flex-wrap: wrap;
+
+    }
+
+    .btn {
+
+      display: inline-block;
+
+      padding: 18px 34px;
+
+      background: #000;
+
+      color: #fff;
+
+      border: 4px solid #000;
+
+      text-decoration: none;
+
+      text-transform: uppercase;
+
+      font-weight: 900;
+
+      font-size: 0.95rem;
+
+      transition: 0.2s ease;
+
+    }
+
+    .btn:hover {
+
+      transform: scale(1.04);
+
+    }
+
+    .btn.red {
+
+      background: #ff0000;
+
+      border-color: #ff0000;
+
+    }
+
+    .btn.white {
+
+      background: #fff;
+
+      border-color: #fff;
+
+      color: #000;
+
+    }
+
+    /* SECTIONS */
+
+    section {
+
+      max-width: 1150px;
+
+      margin: auto;
+
+      padding: 90px 20px;
+
+    }
+
+    h2 {
+
+      font-size: 3.4rem;
+
+      text-transform: uppercase;
+
+      margin-bottom: 35px;
+
+      letter-spacing: -2px;
+
+    }
+
+    .bio-text {
+
+      max-width: 850px;
+
+      margin: 25px auto 0;
+
+      font-size: 1.2rem;
+
+      line-height: 1.5;
+
+    }
+
+    /* IMAGES */
+
+    .standard-img {
+
+      width: 100%;
+
+      max-width: 650px;
+
+      height: 450px;
+
+      object-fit: cover;
+
+      border: 8px solid #000;
+
+    }
+
+    .caption {
+
+      display: inline-block;
+
+      margin-top: 15px;
+
+      background: #000;
+
+      color: #fff;
+
+      padding: 8px 20px;
+
+      text-transform: uppercase;
+
+      font-size: 1rem;
+
+    }
+
+    /* SPOTIFY */
+
+    .spotify-embed {
+
+      max-width: 900px;
+
+      margin: 45px auto 0;
+
+      border-radius: 14px;
+
+      overflow: hidden;
+
+    }
+
+    /* DARK SECTION */
+
+    .dark-section {
+
+      background: #000;
+
+      color: #fff;
+
+      max-width: none;
+
+    }
+
+    .dark-inner {
+
+      max-width: 1100px;
+
+      margin: auto;
+
+    }
+
+    .movement-title {
+
+      font-family: 'Almendra Display', serif;
+
+      color: #ff0000;
+
+      font-size: 5rem;
+
+      margin: 0;
+
+    }
+
+    /* VIDEOS */
+
+    .video-wrapper {
+
+      border: 8px solid #000;
+
+      margin-bottom: 50px;
+
+      max-width: 850px;
+
+      margin-left: auto;
+
+      margin-right: auto;
+
+    }
+
+    .video-container {
+
+      position: relative;
+
+      padding-bottom: 56.25%;
+
+      height: 0;
+
+    }
+
+    .video-container iframe {
+
+      position: absolute;
+
+      width: 100%;
+
+      height: 100%;
+
+      left: 0;
+
+      top: 0;
+
+      border: none;
+
+    }
+
+    /* BOOKING */
+
+    .booking-row {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+
+    }
+
+    .booking-img-small {
+
+      width: 320px;
+
+      height: 320px;
+
+      object-fit: cover;
+
+      border: 8px solid #000;
+
+    }
+
+    .email-box {
+
+      background: #000;
+
+      color: #fff;
+
+      padding: 35px 20px;
+
+      margin-top: 35px;
+
+    }
+
+    /* FOOTER */
+
+    footer {
+
+      background: #000;
+
+      color: #fff;
+
+      padding: 50px 20px;
+
+      font-weight: bold;
+
+    }
+
+    hr {
+
+      border: 0;
+
+      border-top: 10px solid #000;
+
+      margin: 0;
+
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      body {
+
+        padding-top: 110px;
+
+      }
+
+      nav a {
+
+        display: inline-block;
+
+        margin: 6px 8px;
+
+        font-size: 0.72rem;
+
+      }
+
+      h2 {
+
+        font-size: 2.2rem;
+
+      }
+
+      .hero-text-bg {
+
+        font-size: 23vw;
+
+        white-space: normal;
+
+        line-height: 0.9;
+
+      }
+
+      .tagline {
+
+        font-size: 1.1rem;
+
+      }
+
+      .movement-title {
+
+        font-size: 3.5rem;
+
+      }
+
+      .standard-img {
+
+        height: 300px;
+
+      }
+
+      .btn {
+
+        width: 100%;
+
+        max-width: 320px;
+
+      }
+
+    }
+
+  </style>
+
 </head>
+
 <body>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#merch">Merch</a>
-        <a href="#visuals">Visuals</a>
-        <a href="#booking">Booking</a>
-    </nav>
+  <!-- NAV -->
 
-    <div class="hero-container">
-        <div class="hero-text-bg">GEE RELATED</div>
-        <img src="images/black_white.jpg" alt="Gee Related Logo" class="hero-logo">
+  <nav>
+
+    <a href="#home">Home</a>
+
+    <a href="#music">Music</a>
+
+    <a href="#about">About</a>
+
+    <a href="#visuals">Visuals</a>
+
+    <a href="#booking">Booking</a>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <header class="hero-container" id="home">
+
+    <div class="hero-text-bg">
+
+      GEE RELATED
+
     </div>
 
-    <section id="home">
-        <h2>THE KREW</h2>
-        <img src="images/krew.JPG" alt="The Krew" class="standard-img">
-        <br>
-        <p class="caption">Prozik & Rocio Gee</p>
-    </section>
+    <div class="hero-content">
 
-    <hr>
+      <img
 
-    <section id="about">
-        <h2>ABOUT</h2>
-        <img src="images/mic.JPG" alt="Bio" class="standard-img">
-        <p style="font-size: 1.5rem; margin-top: 25px; line-height: 1.1;">INDEPENDENT HIP HOP / R&B ARTIST & FOUNDER OF GEE RELATED ENTERTAINMENT.</p>
-    </section>
+        src="images/black_white.jpg"
 
-    <hr>
+        alt="Gee Related Logo"
 
-    <section id="merch">
-        <h2 style="color: #fff; margin-bottom: 10px;">MERCH</h2>
-        <p class="old-english-clean">Coming Soon</p>
-    </section>
+        class="hero-logo"
 
-    <hr>
+      >
 
-    <section id="visuals">
-        <h2>VISUALS</h2>
-        <div class="video-wrapper">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/8_oZoxJNQig?si=L7wWjjIuUf5lVehK" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="video-wrapper">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/6IVTy4s9_7o?si=4Nlmb-cNjGPByPCL" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+      <p class="tagline">
 
-    <hr>
+        Independent Hip Hop / R&B Artist
 
-    <section id="booking">
-        <h2>BOOKING</h2>
-        <div class="booking-row">
-            <img src="images/onstage.JPG" alt="Booking 1" class="booking-img-small">
-            <img src="images/stage.jpg" alt="Booking 2" class="booking-img-small">
-        </div>
-        <br>
-        <a href="mailto:Booking@geerelated.com" class="btn">BOOKING@GEERELATED.COM</a>
-    </section>
+      </p>
 
-    <footer>
-        <p>© 2026 GEE RELATED ENTERTAINMENT</p>
-    </footer>
+      <p class="subtagline">
+
+        It’s more than a lifestyle. It’s a movement.
+
+      </p>
+
+      <div class="btn-group">
+
+        <a href="#music" class="btn white">
+
+          Listen Now
+
+        </a>
+
+        <a href="#visuals" class="btn red">
+
+          Watch Visuals
+
+        </a>
+
+        <a href="#booking" class="btn white">
+
+          Booking
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- MUSIC -->
+
+  <section id="music">
+
+    <h2>Latest Music</h2>
+
+    <p class="bio-text">
+
+      Stream Gee Related on Spotify, Apple Music,
+
+      YouTube, and SoundCloud.
+
+    </p>
+
+    <div class="btn-group">
+
+      <a
+
+        href="https://open.spotify.com/playlist/5XKzpGmapIR41sSIRxWTwr?si=82JPuuuIQU6-Qr5tDC4PQA&pi=2baLlpD6TOOXZ"
+
+        target="_blank"
+
+        class="btn red"
+
+      >
+
+        Spotify
+
+      </a>
+
+      <a
+
+        href="https://music.apple.com/us/artist/gee-related/1880584032"
+
+        target="_blank"
+
+        class="btn"
+
+      >
+
+        Apple Music
+
+      </a>
+
+      <a
+
+        href="https://youtube.com/@geerelated?si=e1Znp-abGNCxDig9"
+
+        target="_blank"
+
+        class="btn"
+
+      >
+
+        YouTube
+
+      </a>
+
+      <a
+
+        href="https://on.soundcloud.com/HO5towdH6AZReMtmYP"
+
+        target="_blank"
+
+        class="btn"
+
+      >
+
+        SoundCloud
+
+      </a>
+
+    </div>
+
+    <!-- SPOTIFY EMBED -->
+
+    <div class="spotify-embed">
+
+      <iframe
+
+        style="border-radius:12px"
+
+        src="https://open.spotify.com/embed/playlist/5XKzpGmapIR41sSIRxWTwr?utm_source=generator"
+
+        width="100%"
+
+        height="352"
+
+        frameBorder="0"
+
+        allowfullscreen=""
+
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+
+        loading="lazy">
+
+      </iframe>
+
+    </div>
+
+  </section>
+
+  <hr>
+
+  <!-- KREW -->
+
+  <section>
+
+    <h2>The Krew</h2>
+
+    <img
+
+      src="images/krew.JPG"
+
+      alt="The Krew"
+
+      class="standard-img"
+
+    >
+
+    <br>
+
+    <p class="caption">
+
+      Prozik & Rocio Gee
+
+    </p>
+
+  </section>
+
+  <hr>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <h2>About</h2>
+
+    <img
+
+      src="images/mic.JPG"
+
+      alt="Gee Related"
+
+      class="standard-img"
+
+    >
+
+    <p class="bio-text">
+
+      Gee Related is an independent Hip Hop and R&B artist
+
+      and founder of Gee Related Entertainment. Built on
+
+      loyalty, hustle, and real-life experiences, Gee Related
+
+      represents more than music — it’s a movement.
+
+      Combining melodic energy, cinematic visuals,
+
+      and authentic storytelling, Gee Related is building
+
+      a culture for listeners who respect ambition,
+
+      family, and authenticity.
+
+    </p>
+
+  </section>
+
+  <hr>
+
+  <!-- MOVEMENT -->
+
+  <section class="dark-section">
+
+    <div class="dark-inner">
+
+      <h2>Join The Movement</h2>
+
+      <p class="movement-title">
+
+        Gee Related
+
+      </p>
+
+      <p class="bio-text">
+
+        Exclusive visuals, music drops,
+
+        behind-the-scenes content, and future merch releases.
+
+      </p>
+
+      <div class="btn-group">
+
+        <a
+
+          href="mailto:geerelatedentertainment1@gmail.com"
+
+          class="btn white"
+
+        >
+
+          Contact
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <hr>
+
+  <!-- VISUALS -->
+
+  <section id="visuals">
+
+    <h2>Visuals</h2>
+
+    <div class="video-wrapper">
+
+      <div class="video-container">
+
+        <iframe
+
+          src="https://www.youtube.com/embed/8_oZoxJNQig?si=L7wWjjIuUf5lVehK"
+
+          allowfullscreen>
+
+        </iframe>
+
+      </div>
+
+    </div>
+
+    <div class="video-wrapper">
+
+      <div class="video-container">
+
+        <iframe
+
+          src="https://www.youtube.com/embed/6IVTy4s9_7o?si=4Nlmb-cNjGPByPCL"
+
+          allowfullscreen>
+
+        </iframe>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <hr>
+
+  <!-- BOOKING -->
+
+  <section id="booking">
+
+    <h2>Booking</h2>
+
+    <div class="booking-row">
+
+      <img
+
+        src="images/onstage.JPG"
+
+        alt="Performance Photo"
+
+        class="booking-img-small"
+
+      >
+
+      <img
+
+        src="images/stage.jpg"
+
+        alt="Stage Photo"
+
+        class="booking-img-small"
+
+      >
+
+    </div>
+
+    <div class="email-box">
+
+      <p>
+
+        For booking, collaborations, interviews,
+
+        features, and business inquiries:
+
+      </p>
+
+      <a
+
+        href="mailto:geerelatedentertainment1@gmail.com"
+
+        class="btn white"
+
+      >
+
+        geerelatedentertainment1@gmail.com
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+
+      © 2026 GEE RELATED ENTERTAINMENT
+
+    </p>
+
+    <p>
+
+      It’s more than a lifestyle. It’s a movement.
+
+    </p>
+
+  </footer>
 
 </body>
+
 </html>
